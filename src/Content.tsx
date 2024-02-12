@@ -12,7 +12,9 @@ const Content: React.FC<ContentProps> = ({ courseParts }) => {
       {courseParts.map(coursePart => (
         <div style={{ border: '1px solid black' }}>
           <p>
-            {coursePart.name} {coursePart.exerciseCount}
+            <b>
+              {coursePart.name} {coursePart.exerciseCount}
+            </b>
           </p>
           <Part coursePart={coursePart} />
         </div>
