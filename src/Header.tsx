@@ -1,7 +1,11 @@
 import React from 'react';
 
-function Header({ courseName }: { courseName: string }) {
-  return <h1>{courseName}</h1>;
+interface HeaderProps {
+  courseName: string;
 }
+
+const Header: React.FC<HeaderProps> = ({ courseName }) => {
+  return <h1>{courseName}</h1>;
+};
 
 export default Header;

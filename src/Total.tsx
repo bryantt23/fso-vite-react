@@ -1,7 +1,10 @@
 import React from 'react';
 
-function Total({ totalExercises }: { totalExercises: number }) {
-  return <p>Number of exercises {totalExercises}</p>;
+interface TotalProps {
+  totalExercises: number;
 }
+const Total: React.FC<TotalProps> = ({ totalExercises }) => {
+  return <p>Number of exercises {totalExercises}</p>;
+};
 
 export default Total;

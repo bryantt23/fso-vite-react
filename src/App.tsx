@@ -1,9 +1,11 @@
+import Content from './Content';
 import Header from './Header';
 import Total from './Total';
+import { Course } from './types'; // Import the Course type
 
 const App = () => {
   const courseName = 'Half Stack application development';
-  const courseParts = [
+  const courseParts: Course[] = [
     {
       name: 'Fundamentals',
       exerciseCount: 10
@@ -26,15 +28,7 @@ const App = () => {
   return (
     <div>
       <Header courseName={courseName} />
-      <p>
-        {courseParts[0].name} {courseParts[0].exerciseCount}
-      </p>
-      <p>
-        {courseParts[1].name} {courseParts[1].exerciseCount}
-      </p>
-      <p>
-        {courseParts[2].name} {courseParts[2].exerciseCount}
-      </p>
+      <Content courseParts={courseParts} />
       <Total totalExercises={totalExercises} />
     </div>
   );
