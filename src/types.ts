@@ -1,7 +1,3 @@
-export type Course = {
-    name: string;
-    exerciseCount: number;
-};
 interface CoursePartBase {
     name: string;
     exerciseCount: number;
